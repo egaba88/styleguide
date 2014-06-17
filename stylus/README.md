@@ -25,7 +25,7 @@ Stylus Style
 
 Naming Conventions
 ------------
-* Separate words in class names with hypens; camelCase IDs.
+* Both class and ID selectors are to use dasherized notation.
 * Use names that reflect the purpose of the element instead of names that are strictly presentational.
 * Unless necessary, do not overqualify ID and class names with type selectors.
 
@@ -35,24 +35,32 @@ Examples
 Example of bad syntax:
 
 ```stylus
-badBackground = white;
+badVariableName = white;
 
 .badExample{
   sprite: icn-cart;
-  background: badBackground;
+  background: badVariableName;
   box-shadow:0px 0px 5px rgba(0,0,0,30%);
+}
+
+#muchBad {
+  // code
 }
 ```
 
 Example of good syntax:
 
 ```stylus
-$good-background = #fff;
+$good-variable-name = #fff;
 
 .good-example {
   sprite('icn-cart');
-  background: $good-background;
+  background: $good-variable-name;
   box-shadow: 0 0 5px rgba(#000, 30%);
+}
+
+#good-id {
+  // code
 }
 ```
 
